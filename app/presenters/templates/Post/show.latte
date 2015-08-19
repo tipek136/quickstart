@@ -1,0 +1,5 @@
+{block content}
+<p><a href='{link Homepage:default}'>Hlavní stránka</a></p>
+<h1 n:block='title'>{$post->title}</h1>
+<div id='content'>{$post->content}</div>
+<div id='created_at'>{$post->created_at|date:'j. F Y, G:i'}</div>
