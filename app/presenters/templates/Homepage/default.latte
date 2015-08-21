@@ -1,11 +1,10 @@
 {block content}
-    <h1 n:block='title'>Můj blog</h1>
+    <h1 n:block="title">Můj blog</h1>
+    <h3><a n:href="Post:create" n:if="$user->loggedIn">Nový článek</a></h3>
+    <div n:foreach="$posts as $post" class="post">
 
-    {foreach $posts as $post}
-        <div class='post'>
-            <h2><a href='{link Post:show $post->id}'>{$post->title}</a></h2>
-            <p>{$post->content}</p>
-            <div class='date'>{$post->created_at|date:'j. F Y, G:i'}</div>
-            <hr>
-        </div>
-    {/foreach}
+        <h2><a n:href="Post:show, $post->id">{$post->title}</a></h2>
+
+        <div>{$post->content}</div>
+        <div class="date">{$post->created_at|date:'F j Y, H:i'}</div>
+    </div>

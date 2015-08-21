@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/presenters/PostPresenter.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/presenters/SignPresenter.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/presenters/templates/@layout.latte" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/presenters/templates/Homepage/default.latte" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/presenters/templates/Post/create.latte" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/presenters/templates/Post/edit.latte" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/presenters/templates/Post/show.latte" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/presenters/templates/Sign/in.latte" charset="UTF-8" />
   </component>
 </project>

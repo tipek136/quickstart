@@ -19,7 +19,11 @@ session:
 	expiration: 14 days
 
 
+security:
+	users:
+		admin: secret # user 'admin', password 'secret'
+
+
 services:
-	- App\Model\UserManager
 	- App\Forms\SignFormFactory
 	router: App\RouterFactory::createRouter

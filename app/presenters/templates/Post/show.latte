@@ -1,5 +1,19 @@
 {block content}
-<p><a href='{link Homepage:default}'>Hlavní stránka</a></p>
-<h1 n:block='title'>{$post->title}</h1>
-<div id='content'>{$post->content}</div>
-<div id='created_at'>{$post->created_at|date:'j. F Y, G:i'}</div>
+    <h1 n:block="title">{$post->title}</h1>
+
+    <div class="post">{$post->content}</div>
+
+    <div class="date">{$post->created_at|date:"F j, Y"}</div>
+
+    <a n:href="edit $post->id" n:if="$user->loggedIn">Upravit článek</a>
+    <hr>
+    <h2>Vložte nový komentář</h2>
+    {control commentForm}
+
+    <h2>Komentáře</h2>
+    <div class="comments">
+        {foreach $comments as $comment}
+            <p><b><a href="mailto:{$comment->email}" n:tag-if="$comment->email">{$comment->name}</a></b> v <em>{$comment->created_at|date:"H:i, j. F, Y"}</em> napsal:</p>
+            <div>{$comment->content}</div>
+        {/foreach}
+    </div>
